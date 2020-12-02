@@ -1,0 +1,136 @@
+$mainColor :#ffb400;
+
+.main-color {
+    color: $mainColor;
+}
+
+.section-padding {
+    padding: 100px 0;
+    @media screen and (max-width:767px) {
+        padding: 50px 0;
+    }
+}
+
+.bg {
+    background-color: #222;
+}
+
+.block-titles {
+    margin-bottom: 80px;
+    @media screen and (max-width:767px) {
+        margin-bottom: 40px; 
+    }
+
+    h2 {
+        font-size: 56px;
+        font-weight: 900;
+        margin: 0;
+      
+        @media screen and (max-width:991px) {
+            font-size: 45px; 
+        }
+        @media screen and (max-width:575px) {
+            font-size: 35px; 
+        }
+     
+    }
+
+    >span {
+        font-size: 110px;
+        left: 0;
+        letter-spacing: 10px;
+        line-height: 0.7;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.07);
+        @media screen and (max-width:991px) {
+            font-size: 80px; 
+        }
+        @media screen and (max-width:767px) {
+          display: none;
+        }
+    }
+}
+
+.social-media{
+    li{
+        display: inline-block;
+        margin: 0 5px;
+        a{
+            display: inline-block;
+            padding: 0 10px;
+            height: 40px;
+            width: 40px;
+            background-color: #2b2a2a;
+            line-height: 38px;
+            border-radius: 50%;
+            font-size: 17px;
+            color: white;
+            transition: all ease-in-out .3s;
+            text-align: center;
+            &:hover {
+                background-color: $mainColor;
+            }
+        }
+    }
+}
+
+.button {
+    letter-spacing: 3px;
+    border: 1px solid $mainColor;
+    border-radius: 20px;
+    padding: 5px 25px;
+    background-color: $mainColor;
+    transition: all .5s ease-in-out;
+    display: inline-block;
+    color: white;
+
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+input,
+textarea:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+$font-weights: 
+400,
+500,
+600,
+700;
+
+@each $font in $font-weights {
+    .font-weight-#{$font} {
+        font-weight: $font
+    }
+}
