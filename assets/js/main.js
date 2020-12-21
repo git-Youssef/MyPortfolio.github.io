@@ -4,10 +4,13 @@
 
   //change active class 
 
-  $(".smoothScroll").click(function () {
+  $(".smoothScroll").click(function (e) {
+
+    e.preventDefault();
 
     let href = $(this).attr("href");
 
+    console.log(href)
 
     if ($(this).closest(".nav-links").length > 0) {
       $(".nav-links a").removeClass("active");
@@ -29,7 +32,7 @@
   })
 
   // typed text
-  var typed = new Typed('.typed', {
+  let typed = new Typed('.typed', {
     strings: ["Front End Developer.", "Web Integrator."],
     typeSpeed: 50,
     backSpeed: 30,
@@ -40,7 +43,6 @@
   //target tooltip
   $('[data-toggle]').tooltip();
 
- 
   //intilaize magnifique popup 
 
   $('#portfolio-container').magnificPopup({
